@@ -1,0 +1,2550 @@
+{
+	"info": {
+		"_postman_id": "228ccb93-29e6-452b-98a0-e187d7821807",
+		"name": "Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37757111"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "POST / (create new user)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"luna0102\",\r\n    \"password\": \"Luna@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /token/issue (login viewer)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEiLCJpYXQiOjE3MjU5Mzg5NzksImV4cCI6MTcyNjAyNTM3OX0.Aw4hYETScF6EIMzWuAsthXoBb9A5MDToJnXMT91t-zhQpzw4-JU65nIQ0mT-zxy7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"luna0102\",\r\n    \"password\": \"Luna@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/token/issue",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"token",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMiIsImlhdCI6MTcyNjE5MzI4NSwiZXhwIjoxNzI2Mjc5Njg1fQ.fwiZSP5sLapvtdn3p8khDNaZrGLvoOt4GYOolyywNIdDuQ7FM5My_-6cHLCjjp_0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"luna010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT / (update name, email, phone)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMiIsImlhdCI6MTcyNjE5MzI4NSwiZXhwIjoxNzI2Mjc5Njg1fQ.fwiZSP5sLapvtdn3p8khDNaZrGLvoOt4GYOolyywNIdDuQ7FM5My_-6cHLCjjp_0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Luna Do\",\r\n    \"email\":\"luna0102@gmail.com\",\r\n    \"phone\": \"010-102\",\r\n    \"age\": 22,\r\n    \"nickname\": \"LD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /avatar (update image)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMiIsImlhdCI6MTcyNjE5MzI4NSwiZXhwIjoxNzI2Mjc5Njg1fQ.fwiZSP5sLapvtdn3p8khDNaZrGLvoOt4GYOolyywNIdDuQ7FM5My_-6cHLCjjp_0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1ef629af-f574-4610-bd56-9b277feb2dfe"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/avatar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /change-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMiIsImlhdCI6MTcyNjE5MzI4NSwiZXhwIjoxNzI2Mjc5Njg1fQ.fwiZSP5sLapvtdn3p8khDNaZrGLvoOt4GYOolyywNIdDuQ7FM5My_-6cHLCjjp_0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "Luna@01",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "Luna010209",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/change-password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shop",
+			"item": [
+				{
+					"name": "create shop",
+					"item": [
+						{
+							"name": "shop1 (rejected open)",
+							"item": [
+								{
+									"name": "POST /token/issue (login user)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"luna01\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEiLCJpYXQiOjE3MjYxOTM0NTksImV4cCI6MTcyNjI3OTg1OX0.nML4STJrvb79OzCXlOYPO3KjjgQVtlics9GFgixKU05AfGfaa6Me5DjHVdd7NIzX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"luna010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /shops (create shop)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEiLCJpYXQiOjE3MjYxOTM0NTksImV4cCI6MTcyNjI3OTg1OX0.nML4STJrvb79OzCXlOYPO3KjjgQVtlics9GFgixKU05AfGfaa6Me5DjHVdd7NIzX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"name\": \"shop?\",\r\n   \"introduction\": \"\",\r\n   \"category\": \"Fashion\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/shops",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"shops"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /shops",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEiLCJpYXQiOjE3MjYxOTM0NTksImV4cCI6MTcyNjI3OTg1OX0.nML4STJrvb79OzCXlOYPO3KjjgQVtlics9GFgixKU05AfGfaa6Me5DjHVdd7NIzX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"name\": \"shop3\",\r\n   \"introduction\": \"hello\",\r\n   \"categoryId\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/shops",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"shops"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT /shops",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEiLCJpYXQiOjE3MjYxOTM0NTksImV4cCI6MTcyNjI3OTg1OX0.nML4STJrvb79OzCXlOYPO3KjjgQVtlics9GFgixKU05AfGfaa6Me5DjHVdd7NIzX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Universe shop\",\r\n    \"category\": \"Sports\",\r\n    \"introduction\": \"Welcome to my shop!\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/shops",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"shops"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT /shops/status (confirm reject)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEiLCJpYXQiOjE3MjYxOTM0NTksImV4cCI6MTcyNjI3OTg1OX0.nML4STJrvb79OzCXlOYPO3KjjgQVtlics9GFgixKU05AfGfaa6Me5DjHVdd7NIzX",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"Confirm reject\",\r\n    \"reason\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/shops/status",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"shops",
+												"status"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "shop2 (open success)",
+							"item": [
+								{
+									"name": "POST /token/issue (login user) Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEiLCJpYXQiOjE3MjU5Mzg5NzksImV4cCI6MTcyNjAyNTM3OX0.Aw4hYETScF6EIMzWuAsthXoBb9A5MDToJnXMT91t-zhQpzw4-JU65nIQ0mT-zxy7",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"lina00\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaW5hMDAiLCJpYXQiOjE3MjYxOTM2NjcsImV4cCI6MTcyNjI4MDA2N30.5AVuu6KsdbZvSoGIXzHNtfsBUaSctvUYTfmiYztd1jcdzmD26uJLrptPmXl_plsk",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"luna010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /shops",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaW5hMDAiLCJpYXQiOjE3MjYxOTM2NjcsImV4cCI6MTcyNjI4MDA2N30.5AVuu6KsdbZvSoGIXzHNtfsBUaSctvUYTfmiYztd1jcdzmD26uJLrptPmXl_plsk",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"name\": \"Luna shop\",\r\n   \"introduction\": \"We pride ourselves on offering a wide range of products to meet all your electronic needs.\",\r\n   \"category\": \"Electronics\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/shops",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"shops"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "shop3 (opened->close)",
+							"item": [
+								{
+									"name": "POST /token/issue (login user) Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzZWxsZXIzIiwiaWF0IjoxNzI1OTQyNTUzLCJleHAiOjE3MjYwMjg5NTN9.uxIoq0TObN61mtEvU_jhppYGpubdthudh04_nPCaOs7yXyFBDvmbYHWgFSbhskAu",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"seller1\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET /",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzZWxsZXIxIiwiaWF0IjoxNzI2MTkzNzQ5LCJleHAiOjE3MjYyODAxNDl9.qrgngHgOcJtW4JK3vUqEeFAgDh41YPLrzvsGhTRLlVTzUQ5DGHWN7AT_OKwCzIIy",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"luna010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /shops/status (wanna close)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzZWxsZXIxIiwiaWF0IjoxNzI2MTkzNzQ5LCJleHAiOjE3MjYyODAxNDl9.qrgngHgOcJtW4JK3vUqEeFAgDh41YPLrzvsGhTRLlVTzUQ5DGHWN7AT_OKwCzIIy",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"status\": \"Request close\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/shops/status",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"shops",
+												"status"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "manage store (admin)",
+					"item": [
+						{
+							"name": "POST /token/issue (login admin)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"luna010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/token/issue",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"token",
+										"issue"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /manage-shops",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMjA5IiwiaWF0IjoxNzI2MTk0MDU4LCJleHAiOjE3MjYyODA0NTh9.v-D6bmt7dWfDKAVfXQuB0lraEoYD5rQSKCZQABYIFdQf0jWKRrHzE4J1sAFDp5zj",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"shop3\",\r\n   \"introduction\": \"hello\",\r\n   \"categoryId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-shops",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-shops"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /manage-shops/{id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMjA5IiwiaWF0IjoxNzI2MTk0MDU4LCJleHAiOjE3MjYyODA0NTh9.v-D6bmt7dWfDKAVfXQuB0lraEoYD5rQSKCZQABYIFdQf0jWKRrHzE4J1sAFDp5zj",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\": \"shop3\",\r\n   \"introduction\": \"hello\",\r\n   \"categoryId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-shops/6",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-shops",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /manage-shops/{shopId} (shop1)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMjA5IiwiaWF0IjoxNzI2MTk0MDU4LCJleHAiOjE3MjYyODA0NTh9.v-D6bmt7dWfDKAVfXQuB0lraEoYD5rQSKCZQABYIFdQf0jWKRrHzE4J1sAFDp5zj",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Reject\",\r\n    \"reason\": \"Your form is invalid\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-shops/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-shops",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /manage-shops/{shopIdx} (shop2)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMjA5IiwiaWF0IjoxNzI2MTk0MDU4LCJleHAiOjE3MjYyODA0NTh9.v-D6bmt7dWfDKAVfXQuB0lraEoYD5rQSKCZQABYIFdQf0jWKRrHzE4J1sAFDp5zj",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Opened\",\r\n    \"reason\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-shops/6",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-shops",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /manage-shops/{shopIdx} (shop3)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsdW5hMDEwMjA5IiwiaWF0IjoxNzI2MTk0MDU4LCJleHAiOjE3MjYyODA0NTh9.v-D6bmt7dWfDKAVfXQuB0lraEoYD5rQSKCZQABYIFdQf0jWKRrHzE4J1sAFDp5zj",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Opened\",\r\n    \"reason\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-shops/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-shops",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "shop1",
+					"item": [
+						{
+							"name": "POST /token/issue (login business)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"lido010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/token/issue",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"token",
+										"issue"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET / (login business)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"luna01\",\r\n    \"password\": \"Luna@01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /manage-items",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"light bulb\",\r\n    \"stock\": 100,\r\n    \"price\": 2000,\r\n    \"description\":\"For bright world\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /manage-items item2",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"chair\",\r\n    \"stock\": 10,\r\n    \"price\": 7000,\r\n    \"description\":\"Chair for good life\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /manage-items",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"charger\",\r\n    \"stock\": 60,\r\n    \"price\": 3000,\r\n    \"discription\":\"For every types of phone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET /manage-items/item{itemIdx}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"charger\",\r\n    \"stock\": 60,\r\n    \"price\": 3000,\r\n    \"discription\":\"For every types of phone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items/item0",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items",
+										"item0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /manage-items/item{itemIdx}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"charger\",\r\n    \"stock\": 40,\r\n    \"price\": 4500,\r\n    \"description\":\"For every types of phone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items/item0",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items",
+										"item0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT /manage-items/item{itemIdx}/image",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "postman-cloud:///1ef6f2b9-cffc-4760-bddf-93d7e54640dc"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items/item0/image",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items",
+										"item0",
+										"image"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE /manage-items/item{itemIdx}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk0MzUyLCJleHAiOjE3MjYyODA3NTJ9.y6LeobQPwojH0XYxtPQN1KLhVYIrhsMhzc1aHcJOeJEqwbU1r8HHOaXwe6IEE-Pf",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"charger\",\r\n    \"stock\": 40,\r\n    \"price\": 4500,\r\n    \"discription\":\"For every types of phone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items/item2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items",
+										"item2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Normal user (no authority)",
+					"item": [
+						{
+							"name": "POST /token/issue (login user)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Lido_010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/token/issue",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"token",
+										"issue"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET / (login user)",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJMaWRvXzAxMDIwOSIsImlhdCI6MTcyNjE5NzIzMSwiZXhwIjoxNzI2MjgzNjMxfQ.wZpKcLGzf6nk3MuX8O9YWxE3zdGpMImWBB66wgBLS6uh5kSnFtp6LNABZBXyezcJ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"luna01\",\r\n    \"password\": \"Luna@01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /manage-items (No authority)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaW5hMDAiLCJpYXQiOjE3MjU5Mzk3MTEsImV4cCI6MTcyNjAyNjExMX0.WGESVzP5kv24dxyfFYry3Ie6LyUKql_u1v_CvW74W61GBoxjT7q_OLL77Dviyjn_",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"charger\",\r\n    \"stock\": 60,\r\n    \"price\": 3000,\r\n    \"discription\":\"For every types of phone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/manage-items",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"manage-items"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Buyer",
+					"item": [
+						{
+							"name": "buyer1",
+							"item": [
+								{
+									"name": "POST /token/issue (login for buyer)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI1ODU2Njc4LCJleHAiOjE3MjU5NDMwNzh9.sMaE9qyvAbFHCwoDPGeGhUQlYhMLxG3ELtQ4iIvB9Yz5zD-ntC-tpRQ0ytwVK469",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"buyer1\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /orders/itemId order1",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjEiLCJpYXQiOjE3MjYxOTg1ODIsImV4cCI6MTcyNjI4NDk4Mn0.5RTX8elK2LK9byLjVoL6f6qWc_nxeXU3mDvATU0CaMUdjmU1Lk7AJWzxnCQie4ki",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quantity\": 4\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/orders/3",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"orders",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /orders/itemId order2",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjEiLCJpYXQiOjE3MjYxOTg1ODIsImV4cCI6MTcyNjI4NDk4Mn0.5RTX8elK2LK9byLjVoL6f6qWc_nxeXU3mDvATU0CaMUdjmU1Lk7AJWzxnCQie4ki",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quantity\": 2\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/orders/1",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"orders",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /orders/itemId order3",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjEiLCJpYXQiOjE3MjYxOTg1ODIsImV4cCI6MTcyNjI4NDk4Mn0.5RTX8elK2LK9byLjVoL6f6qWc_nxeXU3mDvATU0CaMUdjmU1Lk7AJWzxnCQie4ki",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quantity\": 2\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/orders/8",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"orders",
+												"8"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "buyer2",
+							"item": [
+								{
+									"name": "POST /token/issue (login for buyer) buyer2",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI1ODU2Njc4LCJleHAiOjE3MjU5NDMwNzh9.sMaE9qyvAbFHCwoDPGeGhUQlYhMLxG3ELtQ4iIvB9Yz5zD-ntC-tpRQ0ytwVK469",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"buyer2\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /orders order1",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjIiLCJpYXQiOjE3MjU5NDQ2NjcsImV4cCI6MTcyNjAzMTA2N30._WlB2KlJOPElTUyqwwj72eYyMnhPFUXwEPMqSvYD-Bma_w3UWSheLVejprcR_RJ-",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quantity\": 1,\r\n    \"itemId\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/orders",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"orders"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST /orders order2",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzb21lb25lIiwiaWF0IjoxNzI1OTQzMjE5LCJleHAiOjE3MjYwMjk2MTl9.l5RURp-06tDTe0SRr1HcZlNqDU2hEgRjGMU1SHhKsD4jh8grd1031TnaUMzlO561",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"quantity\": 2,\r\n    \"itemId\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/orders",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"orders"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Seller",
+					"item": [
+						{
+							"name": "seller1",
+							"item": [
+								{
+									"name": "POST /token/issue (login seller)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI1ODU2Njc4LCJleHAiOjE3MjU5NDMwNzh9.sMaE9qyvAbFHCwoDPGeGhUQlYhMLxG3ELtQ4iIvB9Yz5zD-ntC-tpRQ0ytwVK469",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"seller1\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT /manage-items/item{itemIdx}/manage-orders/order{orderIdx}",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzZWxsZXIxIiwiaWF0IjoxNzI2MTk3NjgyLCJleHAiOjE3MjYyODQwODJ9.cqNFp-QHENok06GkVgjHWVuQwKtmNPSu15uB3tCAz3K9wS5u7leHmiCASSJwPiV0",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"Paid\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/manage-items/item/manage-orders/order0",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"manage-items",
+												"item",
+												"manage-orders",
+												"order0"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "seller2",
+							"item": [
+								{
+									"name": "POST /token/issue (login seller) Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI1ODU2Njc4LCJleHAiOjE3MjU5NDMwNzh9.sMaE9qyvAbFHCwoDPGeGhUQlYhMLxG3ELtQ4iIvB9Yz5zD-ntC-tpRQ0ytwVK469",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"seller2\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT /manage-items/item{itemIdx}/manage-orders/order{orderIdx} Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzZWxsZXIyIiwiaWF0IjoxNzI2MTk3NzMyLCJleHAiOjE3MjYyODQxMzJ9.Cio7b74SQEwsGEwsnZ-6aJ6fFu0W8L5Y0mMl6rosvqs7oVwwuYxTQAk2ZyvVAVDM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"Paid\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/manage-items/item4/manage-orders/order0",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"manage-items",
+												"item4",
+												"manage-orders",
+												"order0"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT /manage-items/item{itemIdx}/manage-orders",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "seller3",
+							"item": [
+								{
+									"name": "PUT /manage-items/item{itemIdx}/manage-orders",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								},
+								{
+									"name": "POST /token/issue (login seller) Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI1ODU2Njc4LCJleHAiOjE3MjU5NDMwNzh9.sMaE9qyvAbFHCwoDPGeGhUQlYhMLxG3ELtQ4iIvB9Yz5zD-ntC-tpRQ0ytwVK469",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"lido010209\",\r\n    \"password\": \"Luna@01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/token/issue",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"token",
+												"issue"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT /manage-items/item{itemIdx}/manage-orders/order{orderIdx} Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI2MTk4NjY0LCJleHAiOjE3MjYyODUwNjR9.H5Uu1ciCRQaZLDZs7Q7uavJ53E50I_BeLsy4kRiw11Ya9gpvAgoCPnN3znEqtMi0",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"Paid\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8080/manage-items/item8/manage-orders/order0",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8080",
+											"path": [
+												"manage-items",
+												"item8",
+												"manage-orders",
+												"order0"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "POST /token/issue (login for buyer) buyer1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI1ODU2Njc4LCJleHAiOjE3MjU5NDMwNzh9.sMaE9qyvAbFHCwoDPGeGhUQlYhMLxG3ELtQ4iIvB9Yz5zD-ntC-tpRQ0ytwVK469",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"someone\",\r\n    \"password\": \"Luna@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/token/issue",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"token",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /orders/{orderIdx}",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJMaWRvXzAxMDIwOSIsImlhdCI6MTcyNTg2MDY1NCwiZXhwIjoxNzI1OTQ3MDU0fQ.udy2N_9ES0Ht5g4J6Ty34hZgMqd6mJpuOWS86es0d5BX_MBPdEgMEj4R4mXCRwO5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 3,\r\n    \"item\": {\r\n        \"id\": 2,\r\n        \"name\": \"iphone\",\r\n        \"stock\": 50,\r\n        \"price\": 20000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/orders/0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET / (confirm payment)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJMaWRvXzAxMDIwOSIsImlhdCI6MTcyNTg2MDY1NCwiZXhwIjoxNzI1OTQ3MDU0fQ.udy2N_9ES0Ht5g4J6Ty34hZgMqd6mJpuOWS86es0d5BX_MBPdEgMEj4R4mXCRwO5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 3,\r\n    \"item\": {\r\n        \"id\": 2,\r\n        \"name\": \"iphone\",\r\n        \"stock\": 50,\r\n        \"price\": 20000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /shops/{shopIdx}/item{idx} (confirm stock)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJsaWRvMDEwMjA5IiwiaWF0IjoxNzI1ODU5NTMyLCJleHAiOjE3MjU5NDU5MzJ9.6mxMd0GRuvkQJ8xQf_-ftgHFWt3QTpvVoVIYLpxW44xkrqx936jm68P5_k9fTuci",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 3,\r\n    \"item\": {\r\n        \"id\": 2,\r\n        \"name\": \"iphone\",\r\n        \"stock\": 50,\r\n        \"price\": 20000\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/shops/0/item0",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"shops",
+								"0",
+								"item0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "POST /token/issue (buyer1)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"buyer1\",\r\n    \"password\": \"Luna@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/token/issue",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"token",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /search/shops",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjEiLCJpYXQiOjE3MjYxOTc3OTEsImV4cCI6MTcyNjI4NDE5MX0.9rlKHQBo956N7s2I37JCOCWjBdRI3PBsYaTgFc1bDFPYoMKWeBcZPUlf9pny2gJB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/search/shops",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"search",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /token/issue (buyer2)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"buyer2\",\r\n    \"password\": \"Luna@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/token/issue",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"token",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /search/shops Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjIiLCJpYXQiOjE3MjU5NDU2MzksImV4cCI6MTcyNjAzMjAzOX0.5529Y91_pvZAGu_hcdvpuHmMVt3C-aQY7Px0LJR738ps82u55VF5SXLRpH9mQksf",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/search/shops?categoryId=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"search",
+								"shops"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /search/items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjEiLCJpYXQiOjE3MjYxOTc3OTEsImV4cCI6MTcyNjI4NDE5MX0.9rlKHQBo956N7s2I37JCOCWjBdRI3PBsYaTgFc1bDFPYoMKWeBcZPUlf9pny2gJB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/search/items?price1=2000&price2=3000",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"search",
+								"items"
+							],
+							"query": [
+								{
+									"key": "price1",
+									"value": "2000"
+								},
+								{
+									"key": "price2",
+									"value": "3000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /search/shops/{id}/items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJidXllcjEiLCJpYXQiOjE3MjYxOTc3OTEsImV4cCI6MTcyNjI4NDE5MX0.9rlKHQBo956N7s2I37JCOCWjBdRI3PBsYaTgFc1bDFPYoMKWeBcZPUlf9pny2gJB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/search/shops/3/items?keyword=jacket",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"search",
+								"shops",
+								"3",
+								"items"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "jacket"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
