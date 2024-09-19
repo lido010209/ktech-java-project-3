@@ -993,7 +993,7 @@ public class PasswordConfig {
 ## 기술
 - Using [Spring boot](https://start.spring.io/) to supporting on running web and SQL
 - Using [IntelliJ]() app to create project
-- Using java 8.0
+- Using java 17.0 version
 - Using [Vscode]() to create `.js`, `.html` confirm data of db.sqlite.
 - Using [Bootstrap](https://getbootstrap.com/) to support file `.html` instead of `.css`
 - Using [Font awesome](https://fontawesome.com/) to create icon like `search`
